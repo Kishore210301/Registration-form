@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    max-width: 100%;
+    width: 350px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-control {
+    position: relative;
+}
+
+.form-control label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control input {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 14px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.form-control input:focus {
+    border-color: #6e45e2;
+    box-shadow: 0 0 5px rgba(110, 69, 226, 0.2);
+    outline: none;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.2);
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.2);
+}
+
+.form-control i {
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    visibility: hidden;
+    transition: color 0.3s ease;
+}
+
+.form-control.success i.fa-circle-check {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-circle-exclamation {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control small {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    visibility: hidden;
+    display: block;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    background-color: #6e45e2;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #5539b3;
+}
+
+/* Add some transitions for smoothness */
+.form-control input,
+.form button {
+    transition: all 0.3s ease;
+}
